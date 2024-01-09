@@ -1,6 +1,6 @@
 import React from 'react';
 //images
-import Logo from '../assets/Logo.jpg'
+import Logo from '../assets/logo2.png'
 import {Link} from "react-scroll";
 
 const Header = () => {
@@ -10,7 +10,7 @@ const Header = () => {
           <div className='flex justify-between items-center'>
             {/* logo */}
             <a href='#'>
-              <img src={Logo} width={100} height={100}></img>
+              <img src={Logo} width={180} height={100}></img>
             </a>
             {/* button */}
 
