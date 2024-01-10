@@ -21,14 +21,14 @@ const Work = () => {
                         viewport={{once: false, amount:0.3}}
                         className='flex-1  mb-10 lg:mb-0 '>
                         {/*text*/}
-                        <div>
+                        <div className='font-primary text-sm tracking-[1px]'>
                             <h1 className='h2 leading-tight text-accent'>
-                                My latest Work.
+                                My latest Projects.
                             </h1>
                             <table className='w-full h-full flex items-center' style={{ width: '205%'}}>
                                 <tbody>
                                 <tr>
-                                    <td className="border border-white p-4 flex items-center">
+                                    <td className="border border-white p-4 flex items-center justify-center">
                                         <p>Github Links</p>
                                     </td>
                                     <td className="border border-white p-4">
@@ -62,15 +62,34 @@ const Work = () => {
                                         <p>This machine learning project aimed to predict NFL injuries by combining Kaggle data with personally scraped NFL player and injury data. After thorough cleaning and merging, we trained a model to forecast injuries based on weather, age, and position. Utilizing Power BI, we visualized the insights through graphs, offering a comprehensive understanding of injury patterns and contributing factors.</p>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td className="border border-white p-4">
+                                        <button className='btn btn-sm'>
+                                            <a href="https://github.com/mattflahertyy/DBSocketServer" target="_blank" rel="noopener noreferrer">
+                                                DB Socket Server
+                                            </a>
+                                        </button>
+                                        <p>Python</p>
+                                    </td>
+                                    <td className="border border-white p-4">
+                                        <p>This Python project is a client/server database program. The server manages a customer database from a text file. Clients interact through a menu, performing operations like finding, adding, updating, and deleting records.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="border border-white p-4">
+                                        <button className='btn btn-sm'>
+                                            <a href="https://github.com/mattflahertyy/Orthello" target="_blank" rel="noopener noreferrer">
+                                                Orthello
+                                            </a>
+                                        </button>
+                                        <p>Java</p>
+                                    </td>
+                                    <td className="border border-white p-4">
+                                        <p>Orthello is a 2D board game which is played through the console.</p>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
-
-                            <span className='text-3x1 text-white'>All projects available on my github:            </span>
-                            <button className='btn btn-sm'>
-                                <a href="https://github.com/mattflahertyy" target="_blank" rel="noopener noreferrer">
-                                    GitHub
-                                </a>
-                            </button>
                         </div>
                         {/*image*/}
                         {/*          <div className='groupe relative overflow-hidden border-2 border-white/50 rounded-x1'>*/}

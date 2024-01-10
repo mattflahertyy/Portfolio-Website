@@ -1,6 +1,8 @@
 import React from 'react';
 //images
 import Logo from '../assets/logo2.png'
+import Linkedin from '../assets/linkedin.png'
+import Github from '../assets/github2.png'
 import {Link} from "react-scroll";
 
 const Header = () => {
@@ -12,11 +14,19 @@ const Header = () => {
             <a href='#'>
               <img src={Logo} width={180} height={100}></img>
             </a>
-            {/* button */}
+              <div className="flex space-x-10 items-center">
+                  <a href='https://github.com/mattflahertyy'>
+                      <img src={Github} width={100} height={100}></img>
+                  </a>
+                  <a href='https://www.linkedin.com/in/matthewflaherty9/'>
+                      <img src={Linkedin} width={100} height={75}></img>
+                  </a>
+                      {/* button */}
+                  <Link to='contact' activeClass='active' smooth={true} spy={true} className='cursor-pointer'>
+                      <button className='btn btn-sm'>Contact me</button>
+                  </Link>
+              </div>
 
-            <Link to='contact' activeClass='active' smooth={true} spy={true} className='cursor-pointer'>
-              <button className='btn btn-sm'>Contact me</button>
-            </Link>
           </div>
         </div>
       </header>

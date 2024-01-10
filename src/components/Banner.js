@@ -1,6 +1,6 @@
 import React from 'react';
 //images
-import Image from '../assets/avatar.svg';
+import Image from '../assets/laptop.png';
 //icons
 import {FaGithub, FaYoutube, FaDribble } from 'react-icons/fa';
 //type animation
@@ -77,12 +77,12 @@ const Banner = () => {
               </motion.div>
             </div>
             {/*image*/}
-            {/*<motion.div  variants={fadeIn('down',0.5)}*/}
-            {/*             initial= 'hidden'*/}
-            {/*             whileInView={'show'}*/}
-            {/*             className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]'>*/}
-            {/*  <img src={Image} alt='' />*/}
-            {/*</motion.div>*/}
+            <motion.div  variants={fadeIn('down',0.5)}
+                         initial= 'hidden'
+                         whileInView={'show'}
+                         className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[482px]'>
+              <img src={Image} alt='' />
+            </motion.div>
           </div>
         </div>
       </section>
