@@ -10,6 +10,8 @@ import { fadeIn } from '../variants';
 
 import { useNavigate } from 'react-router-dom';
 import {Link} from "react-scroll";
+import Concordia from "../assets/logoc.webp";
+import {TypeAnimation} from "react-type-animation";
 
 const About = () => {
   const {ref, inView} = useInView({
@@ -32,7 +34,24 @@ const About = () => {
                 initial='hidden'
                 whileInView={'show'}
                 viewport={{once: false, amount:0.3}}
-                className='flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'>
+                className='flex-1 bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'>
+              <div className='flex flex-col items-center lg:gap-y-10'>
+                <a href='https://github.com/mattflahertyy'>
+                  <img src={Concordia} width={1000} height={300}></img>
+                </a>
+                <h3 className='h3 max-w-[455px] mb-16'>Current GPA: <span style={{ color: 'green' }}>3.73</span>
+                </h3>
+                <h3 className='h3 max-w-[455px] mb-16'>Languages spoken: <TypeAnimation
+                    sequence={[
+                      'English', 2000, 'French', 2000,
+                    ]}
+                    speed={50}
+                    className='text-accent'
+                    wrapper='span'
+                    repeat={Infinity}
+                    />
+                </h3>
+              </div>
             </motion.div>
             {/* text */}
             <motion.div
@@ -43,7 +62,7 @@ const About = () => {
                 className='flex-1'>
 
               <h2 className='h2 text-accent'>About me.</h2>
-              <h3 className='h3 mb-4'>I'm a Software Engineering student @ Concordia University located in downtown Montreal.</h3>
+              <h3 className='h3 mb-4'>I'm a Co-Op Software Engineering student @ Concordia University located in downtown Montreal.</h3>
               <p className='mb-6'>
                 Currently working at Phoenix Solutions Inc. as a Junior Software Engineer
               </p>
