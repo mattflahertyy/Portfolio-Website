@@ -93,17 +93,17 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div className='flex gap-x-8 items-center'>
-                <a className='text-gradient btn-link'>
-                  Click to view my Resume pdf:
-                </a>
+              {/*<div className='flex gap-x-8 items-center'>*/}
+              {/*  <a className='text-gradient btn-link'>*/}
+              {/*    Click to view my Resume pdf:*/}
+              {/*  </a>*/}
 
 
-                <Link to='resumeviewer' activeClass='active' smooth={true} spy={true} className='cursor-pointer'>
-                  <button className='btn btn-lg'>CV</button>
-                </Link>
+              {/*  <Link to='resumeviewer' activeClass='active' smooth={true} spy={true} className='cursor-pointer'>*/}
+              {/*    <button className='btn btn-lg'>CV</button>*/}
+              {/*  </Link>*/}
 
-              </div>
+              {/*</div>*/}
             </motion.div>
           </div>
         </div>
