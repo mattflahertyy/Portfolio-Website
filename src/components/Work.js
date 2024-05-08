@@ -38,15 +38,15 @@ const Work = () => {
                                 <tr>
                                     <td className="border border-white p-4">
                                         <button className='btn btn-sm'>
-                                            <a href="https://github.com/mattflahertyy/Amazawn" target="_blank" rel="noopener noreferrer">
-                                                Amazawn
+                                            <a href="https://www.condoconnect.site" target="_blank" rel="noopener noreferrer">
+                                                CondoConnect
                                             </a>
                                         </button>
                                         <br/>
                                         <p>React, Java, SQL</p>
                                     </td>
                                     <td className="border border-white p-4">
-                                        <p>The Amazawn project, a collaborative effort of six developers, employs sprint strategies and an MVC system. This platform streamlines shipping services, offering essential features like account creation, robust user authentication, real-time tracking, and an efficient email notification system. The tech stack includes a React front end, Java-based backend, and SQL database, showcasing proficiency in modern web development tools and technologies.</p>
+                                        <p>CondoConnect is a collaborative effort of 10 developers streamlining a condo management system between condo companies and renters/owners. The system offers essential features like account creation, robust user authentication, condo dashboards, and many more features. The tech stack includes a React JS front end along with Javscript and a Firebase DB storage, showcasing proficiency in modern web development tools and technologies.</p>
                                     </td>
                                 </tr>
                                 <tr>
