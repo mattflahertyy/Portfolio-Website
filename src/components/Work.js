@@ -43,7 +43,7 @@ const Work = () => {
                                             </a>
                                         </button>
                                         <br/>
-                                        <p>React, Java, SQL</p>
+                                        <p>React, JavaScript, NoSQL</p>
                                     </td>
                                     <td className="border border-white p-4">
                                         <p>CondoConnect is a collaborative effort of 10 developers streamlining a condo management system between condo companies and renters/owners. The system offers essential features like account creation, robust user authentication, condo dashboards, and many more features. The tech stack includes a React JS front end along with Javscript and a Firebase DB storage, showcasing proficiency in modern web development tools and technologies.</p>
