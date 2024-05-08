@@ -39,7 +39,7 @@ const About = () => {
                 <a href='https://github.com/mattflahertyy'>
                   <img src={Concordia} width={1000} height={300}></img>
                 </a>
-                <h3 className='h3 max-w-[455px] mb-16'>Current GPA: <span style={{ color: 'green' }}>3.73</span>
+                <h3 className='h3 max-w-[455px] mb-16'>Current GPA: <span style={{ color: 'green' }}>3.76</span>
                 </h3>
                 <h3 className='h3 max-w-[455px] mb-16'>Languages spoken: <TypeAnimation
                     sequence={[
@@ -63,9 +63,9 @@ const About = () => {
 
               <h2 className='h2 text-accent'>About me.</h2>
               <h3 className='h3 mb-4'>I'm a Co-Op Software Engineering student @ Concordia University located in downtown Montreal.</h3>
-              <p className='mb-6'>
-                Currently working at Phoenix Solutions Inc. as a Junior Software Engineer
-              </p>
+              {/*<p className='mb-6'>*/}
+              {/*  Currently working at Phoenix Solutions Inc. as a Junior Software Engineer*/}
+              {/*</p>*/}
               {/* stats */}
               <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
                 <div>
@@ -86,7 +86,7 @@ const About = () => {
                 </div>
                 <div>
                   <div className='text-[35px] font-tertiary text-gradient mb-2'>
-                    {inView ? <CountUp start={0} end={9} duration={3}/> : null}
+                    {inView ? <CountUp start={0} end={12} duration={3}/> : null}
                   </div>
                   <div className='font-primary text-sm tracking-[2px]'>
                     Internship <br/> Months Completed
