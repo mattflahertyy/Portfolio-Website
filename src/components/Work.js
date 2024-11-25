@@ -4,10 +4,7 @@ import {motion} from 'framer-motion';
 //variants
 import {fadeIn} from '../variants';
 //img
-import Img1 from '../assets/portfolio-img1.png';
-import Img2 from '../assets/portfolio-img2.png';
-import Img3 from '../assets/portfolio-img3.png';
-import {Link} from "react-scroll";
+//import {Link} from "react-scroll";
 
 const Work = () => {
     return (

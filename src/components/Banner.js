@@ -1,8 +1,7 @@
 import React from 'react';
 //images
 import Image from '../assets/laptop.png';
-//icons
-import {FaGithub, FaYoutube, FaDribble } from 'react-icons/fa';
+
 //type animation
 import { TypeAnimation } from 'react-type-animation';
 //motion
@@ -11,7 +10,7 @@ import { motion } from 'framer-motion';
 import {fadeIn} from '../variants';
 
 import { Link } from 'react-scroll';
-import {BiUser} from "react-icons/bi";
+// import {BiUser} from "react-icons/bi";
 
 
 const Banner = () => {

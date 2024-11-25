@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 // variant
 import { fadeIn } from '../variants';
 
-import { useNavigate } from 'react-router-dom';
-import {Link} from "react-scroll";
+// import { useNavigate } from 'react-router-dom';
+// import {Link} from "react-scroll";
 import Concordia from "../assets/logoc.webp";
 import {TypeAnimation} from "react-type-animation";
 
@@ -39,7 +39,7 @@ const About = () => {
                 <a href='https://github.com/mattflahertyy'>
                   <img src={Concordia} width={1000} height={300}></img>
                 </a>
-                <h3 className='h3 max-w-[455px] mb-16'>Current GPA: <span style={{ color: 'green' }}>3.76</span>
+                <h3 className='h3 max-w-[455px] mb-16'>Current GPA: <span style={{ color: 'green' }}>3.79</span>
                 </h3>
                 <h3 className='h3 max-w-[455px] mb-16'>Languages spoken: <TypeAnimation
                     sequence={[
@@ -70,7 +70,7 @@ const About = () => {
               <div className='flex gap-x-6 lg:gap-x-10 mb-12'>
                 <div>
                   <div className='text-[35px] font-tertiary text-gradient mb-2'>
-                    {inView ? <CountUp start={0} end={3} duration={3}/> : null}
+                    {inView ? <CountUp start={0} end={4} duration={3}/> : null}
                   </div>
                   <div className='font-primary text-sm tracking-[2px]'>
                     Current <br/> School Year
@@ -78,7 +78,7 @@ const About = () => {
                 </div>
                 <div>
                   <div className='text-[35px] font-tertiary text-gradient mb-2'>
-                    {inView ? <CountUp start={0} end={1} duration={3}/> : null}
+                    {inView ? <CountUp start={0} end={2} duration={3}/> : null}
                   </div>
                   <div className='font-primary text-sm tracking-[2px]'>
                     Internships <br/> Completed
@@ -86,7 +86,7 @@ const About = () => {
                 </div>
                 <div>
                   <div className='text-[35px] font-tertiary text-gradient mb-2'>
-                    {inView ? <CountUp start={0} end={12} duration={3}/> : null}
+                    {inView ? <CountUp start={0} end={16} duration={3}/> : null}
                   </div>
                   <div className='font-primary text-sm tracking-[2px]'>
                     Internship <br/> Months Completed
