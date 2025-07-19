@@ -1,6 +1,7 @@
 import React from 'react';
 //images
 import Image from '../assets/laptop.png';
+//import Image from '../assets/pfp.png';
 
 //type animation
 import { TypeAnimation } from 'react-type-animation';
@@ -12,6 +13,8 @@ import {fadeIn} from '../variants';
 import { Link } from 'react-scroll';
 // import {BiUser} from "react-icons/bi";
 
+// Import resume PDF
+import ResumePDF from '../assets/MatthewFlahertyResume.pdf';
 
 const Banner = () => {
   return (
@@ -37,7 +40,7 @@ const Banner = () => {
                 <span className='text-white mr-4'>I am a</span>
                 <TypeAnimation
                     sequence={[
-                      'Student', 2000, 'Jr Software Engineer', 2000,
+                      'Student', 2000, 'Software Engineer', 2000,
                     ]}
                     speed={50}
                     className='text-accent'
@@ -50,21 +53,45 @@ const Banner = () => {
                   initial= 'hidden'
                   whileInView={'show'}
                   viewport={{once:false, amount:0.7}}
-                  className='mb-8 max-w-lg mx-auto lg:mx-0'>Pursuing a Bachelor of Engineering</motion.p>
+                  className='mb-8 max-w-lg mx-auto lg:mx-0'>Pursuing a Master's degree in Information Systems Security.</motion.p>
               <motion.div
                   variants={fadeIn('up',0.6)}
                   initial= 'hidden'
                   whileInView={'show'}
                   viewport={{once:false, amount:0.7}}
-                  className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
+                  className='flex max-w-max gap-x-1 items-center mb-12 mx-auto lg:mx-0'>
+          
+                  <Link to="about" activeClass="active" smooth={true} spy={true} className="cursor-pointer">
+                    <button className="px-5 py-1 rounded-md bg-[#625dec] text-white font-medium text-base hover:bg-[#7a6ffb] transition select-none">
+                      About Me
+                    </button>
+                  </Link>
 
-                <Link to='about' activeClass='active' smooth={true} spy={true} className='cursor-pointer'>
-                  <button className='btn btn-lg'>About me</button>
-                </Link>
-                <Link to='work' activeClass='active' smooth={true} spy={true} className='cursor-pointer'>
-                  <a href='#' className='text-gradient btn-link'>My Projects</a>
-                </Link>
+                  <Link to="projects" activeClass="active" smooth={true} spy={true} className="cursor-pointer mx-6">
+                    <button className="px-5 py-1 rounded-md bg-[#625dec] text-white font-medium text-base hover:bg-[#7a6ffb] transition select-none">
+                      My Projects
+                    </button>
+                  </Link>
 
+                  <Link to="contact" activeClass="active" smooth={true} spy={true} className="cursor-pointer">
+                    <button className="px-5 py-1 rounded-md bg-[#625dec] text-white font-medium text-base hover:bg-[#7a6ffb] transition select-none">
+                      Contact Me
+                    </button>
+                  </Link>
+              </motion.div>
+              <motion.div
+                variants={fadeIn('up',0.6)}
+                initial= 'hidden'
+                whileInView={'show'}
+                viewport={{once:false, amount:0.7}}
+                className='flex max-w-max gap-x-1 items-center mb-12 mx-auto lg:mx-0 lg:pl-[16%]'>
+                <a 
+                  href={ResumePDF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-1 rounded-md bg-[#625dec] text-white font-medium text-base hover:bg-[#7a6ffb] transition select-none cursor-pointer inline-block text-center">
+                  View My Resume
+                </a>
               </motion.div>
               {/*socials*/}
               <motion.div

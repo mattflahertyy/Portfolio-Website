@@ -1,114 +1,79 @@
 import React from 'react';
-// motion
-import {motion} from 'framer-motion';
-// variants
-import {fadeIn} from '../variants';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
 
 const skills = [
   {
-    name: 'Java and JavaScript',
-    description: 'Java is my strongest programming language and the first one I learned. JavaScript was the second language I learned and used it for many of my personal projects.',
+    title: 'Programming Languages',
+    items: ['Java', 'C#', 'C', 'C++', 'Python', 'Go', 'JavaScript', 'TypeScript', 'SQL'],
   },
   {
-    name: 'Python',
-    description: 'Solid overall in Python - one of my favorite languages especially when dealing with big data.',
-  },
-    {
-    name: 'C#, C and C++',
-    description: 'With C# being my strongest of the 3, I am also proficient in C++ and some C.',
-  },
-      {
-    name: 'React Js, HTML, CSS and PHP',
-    description: 'I am accomplished with most design languages which were needed for personal projects, including react which was used for this website.',
+    title: 'Web & UI Development',
+    items: ['React.js', 'HTML', 'CSS', 'PHP', 'Firebase', 'REST APIs'],
   },
   {
-    name: 'SQL',
-    description: 'Strong background in SQL from my previous internship.',
-  }
-]
+    title: 'Development Environments',
+    items: ['VS Code', 'IntelliJ', 'PyCharm', 'CLion', 'Eclipse', 'Visual Studio'],
+  },
+  {
+    title: 'Tools & Platforms',
+    items: ['GitHub', 'Jira', 'Azure DevOps', 'Figma', 'Power BI', 'Jaspersoft', 'AutoCAD', 'Android Studio'],
+  },
+  {
+    title: 'Spoken Languages',
+    items: ['English (Fluent)', 'French (Fluent)'],
+  },
+  {
+    title: 'Office & Productivity',
+    items: ['Microsoft Word', 'Excel', 'PowerPoint', 'Teams'],
+  },
+];
 
-const platforms = [
-  {
-    name: "VS Code, Eclipse, IntelliJ, Pycharm and CLion",
-    description:"I am most comfortable using any of these Integrated Development Environments."
-  },
-  {
-    name: "Power BI, Figma, Jira and Microsoft Teams",
-    description:"Solid overall experience with from my previous work experience."
-  }
-]
-
-
-const Services = () => {
+const Skills = () => {
   return (
     <section className='section' id='skills'>
-      <div className='container mx-auto'>
-        <div className='flex flex-col lg:flex-row'>
-          { /* text & image */}
-          <motion.div 
-          variants={fadeIn('right', 0.3)} 
-          initial='hidden' 
-          whileInView={'show'} 
-          viewport={{once: false, amount:0.3}} 
-          className='flex-1 lg:bg-skills lg:bg-bottom bg-no-repeat mb-12 lg:mb-0'>
-            <h2 className='h2 text-accent mb-6'>Skills</h2>
-            <h3 className='h3 max-w-[455px] mb-16'>Here are some programming languages, IDE's and applications I excel in.</h3>
+      <div className='container mx-auto px-4 py-12'>
+        {/* Title and subtitle */}
+        <motion.div
+                    variants={fadeIn('down', 0.3)}
+                    initial='hidden'
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.3 }}
+                    className='text-center'>
+                    <h1 className='h2 font-bold leading-tight text-accent mb-6'>
+                        Skills
+                    </h1>
+                </motion.div>
 
-            <div>
-              {platforms.map((skill, index)=> {
-                // destructure service
-                const {name, description} = skill;
-                return (
-                    <div className=' mb-[10px]' key={index}>
-                      <div className='max-w-[476px]'>
-                        <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-4' style={{ color: 'red' }}>{name}</h4>
-                        <p className='font-secondary leading-tight'>{description}</p>
-                      </div>
-                      <div className='flex flex-col flex-1 items-end'>
-                        {/*add language logos here*/}
-                      </div>
-                    </div>
-                );
-              })}
-            </div>
-          </motion.div>
-          { /* skills */}
-
-
-
-
-
-          <motion.div 
-          variants={fadeIn('left', 0.5)} 
-          initial='hidden' 
-          whileInView={'show'} 
-          viewport={{once: false, amount:0.3}} 
-          className='flex-1'>
-            {/* service list */}
-            <div>
-              {skills.map((skill, index)=> {
-                // destructure service
-                const {name, description} = skill;
-                return (
-                  // <div className='border-b border-white/20 h-[120px] mb-[38px] flex' key={index}>
-                    <div className='mb-[10px]' key={index}>
-                    <div className='max-w-[476px]'>
-                       <h4 className='text-[20px] tracking-wider font-primary font-semibold mb-4' style={{ color: 'red' }}>{name}</h4>
-                      <p className='font-secondary leading-tight'>{description}</p>
-                    </div>
-                    <div className='flex flex-col flex-1 items-end'>
-                      {/*add language logos here*/}
-                    </div>
+        {/* Skill boxes */}
+        <motion.div
+          variants={fadeIn('up', 0.5)}
+          initial='hidden'
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.3 }}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+        >
+          {skills.map((category, index) => (
+            <div
+              key={index}
+              className='bg-white/5 border border-white/10 rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 backdrop-blur-sm h-[200px] flex flex-col justify-start'
+            >
+              <h4 className='text-lg font-semibold text-red-400 mb-2 tracking-wide text-center'>
+                {category.title}
+              </h4>
+              <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-20 text-white/90 text-sm leading-relaxed mx-auto justify-center'>
+                {category.items.map((item, i) => (
+                  <div key={i} className='mb-1 before:content-["•"] before:mr-2'>
+                    {item}
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
-          </motion.div>
-        </div>
+          ))}
+        </motion.div>
       </div>
-
     </section>
-    );
+  );
 };
 
-export default Services;
+export default Skills;

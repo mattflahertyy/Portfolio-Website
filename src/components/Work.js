@@ -1,118 +1,191 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
+import { Calendar, MapPin } from 'lucide-react';
 
-import {motion} from 'framer-motion';
-//variants
-import {fadeIn} from '../variants';
-//img
-//import {Link} from "react-scroll";
+import CAE from '../assets/cae.jpeg';
+import Phoenix from '../assets/phoenix.jpeg';
+import Reffing from '../assets/pcasa.jpeg';
 
-const Work = () => {
+const WorkExperience = () => {
+    // Function to calculate duration between two dates
+    const calculateDuration = (startDate, endDate) => {
+        const start = new Date(startDate);
+        const end = endDate === 'Present' ? new Date() : new Date(endDate);
+        
+        const diffTime = Math.abs(end - start);
+        const diffMonths = diffTime / (1000 * 60 * 60 * 24 * 30.44); // Average days per month
+        
+        if (diffMonths >= 12) {
+            const years = diffMonths / 12;
+            return `${years.toFixed(1)} years`;
+        } else {
+            return `${Math.round(diffMonths)} months`;
+        }
+    };
+
+    // Function to format date range display
+    const formatDateRange = (startDate, endDate) => {
+        const start = new Date(startDate);
+        const startMonth = start.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+        
+        if (endDate === 'Present') {
+            return `${startMonth} - Present`;
+        } else {
+            const end = new Date(endDate);
+            const endMonth = end.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+            return `${startMonth} - ${endMonth}`;
+        }
+    };
+
+    const workData = [
+        {
+            id: 1,
+            company: "CAE Inc.",
+            position: "Full Stack Developer Intern",
+            jobType: "Internship",
+            startDate: "September 1, 2024",
+            endDate: "April 25, 2025",
+            description: `  • Designed and developed front-end components and pages for internal tools using React Js and TypeScript.
+                            • Engineered backend API endpoints in C# enabling seamless front-end integration and efficient data transfer.
+                            • Created and optimized SQL scripts, developed and maintained database tables, views, and indexes to support robust data management and reporting.
+                            • Collaborated in an agile environment, participating in sprint planning, grooming, daily scrum meetings, and code reviews to maintain a streamlined development process.`,
+            image: CAE,
+            linkedinUrl: "https://www.linkedin.com/company/cae/",
+        },
+        {
+            id: 2,
+            company: "Phoenix Solutions Inc.",
+            position: "Junior Software Engineer & IT Technician",
+            jobType: "Internship + Part-time",
+            startDate: "May 1, 2023",
+            endDate: "Present",
+            description: `  • Developed an array of SQL queries to generate comprehensive product and inventory reports.
+                            • Crafted and implemented visual sales and inventory dashboards for clients through the proficient utilization of SQL queries within the Power BI framework.
+                            • Collaborated within a team to leveraging agile methodologies including sprint-based development, employing React JS, CSS, and BBj.
+                            • Provided technical support to clients, resolving issues related to software and hardware, ensuring optimal system performance and user satisfaction.
+                            • Conducted remote video conferences with customers to provide guidance on ODBC connection setups.`,
+            image: Phoenix,
+            linkedinUrl: "https://www.linkedin.com/company/phoenix-business-systems-inc-/",
+        },
+        {
+            id: 3,
+            company: "Soccer Pointe-Claire",
+            position: "Referee",
+            jobType: "Part-time",
+            startDate: "April 1, 2015",
+            endDate: "October 31, 2022",
+            description: `  • Officiated over 200 games for the Pointe-Claire Soccer Association and regional leagues. 
+                            • Ensured fair play, enforced rules, and resolved disputes through effective communication and teamwork.`,
+            image: Reffing,
+            linkedinUrl: "https://www.linkedin.com/company/soccerpointeclaire/",
+        }
+    ];
+
+    const handleWorkClick = (linkedinUrl) => {
+        window.open(linkedinUrl, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <section className='section' id='work'>
             <div className="container mx-auto">
-                <div className='flex flex-col lg:flex-row gap-x-10'>
-                    <motion.div
-                        variants={fadeIn('right', 0.3)}
-                        initial='hidden'
-                        whileInView={'show'}
-                        viewport={{once: false, amount:0.3}}
-                        className='flex-1  mb-10 lg:mb-0 '>
-                        {/*text*/}
-                        <div className='font-primary text-sm tracking-[1px]'>
-                            <h1 className='h2 leading-tight text-accent'>
-                                My latest Projects.
-                            </h1>
-                            <table className='w-full h-full flex items-center' style={{ width: '205%'}}>
-                                <tbody>
-                                <tr>
-                                    <td className="border border-white p-4 flex items-center justify-center">
-                                        <p>Github Links</p>
-                                    </td>
-                                    <td className="border border-white p-4">
-                                        <p>Description</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="border border-white p-4">
-                                        <button className='btn btn-sm'>
-                                            <a href="https://www.condoconnect.site" target="_blank" rel="noopener noreferrer">
-                                                CondoConnect
-                                            </a>
-                                        </button>
-                                        <br/>
-                                        <p>React, JavaScript, NoSQL</p>
-                                    </td>
-                                    <td className="border border-white p-4">
-                                        <p>CondoConnect is a collaborative effort of 10 developers streamlining a condo management system between condo companies and renters/owners. The system offers essential features like account creation, robust user authentication, condo dashboards, and many more features. The tech stack includes a React JS front end along with Javscript and a Firebase DB storage, showcasing proficiency in modern web development tools and technologies.</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="border border-white p-4">
-                                        <button className='btn btn-sm'>
-                                            <a href="https://github.com/mattflahertyy/Predicting-NFL-Injuries" target="_blank" rel="noopener noreferrer">
-                                                Prediciting NFL Injuries
-                                            </a>
-                                        </button>
-                                        <p>Python, Power BI</p>
-                                    </td>
-                                    <td className="border border-white p-4">
-                                        <p>This machine learning project aimed to predict NFL injuries by combining Kaggle data with personally scraped NFL player and injury data. After thorough cleaning and merging, we trained a model to forecast injuries based on weather, age, and position. Utilizing Power BI, we visualized the insights through graphs, offering a comprehensive understanding of injury patterns and contributing factors.</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="border border-white p-4">
-                                        <button className='btn btn-sm'>
-                                            <a href="https://github.com/mattflahertyy/DBSocketServer" target="_blank" rel="noopener noreferrer">
-                                                DB Socket Server
-                                            </a>
-                                        </button>
-                                        <p>Python</p>
-                                    </td>
-                                    <td className="border border-white p-4">
-                                        <p>This Python project is a client/server database program. The server manages a customer database from a text file. Clients interact through a menu, performing operations like finding, adding, updating, and deleting records.</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="border border-white p-4">
-                                        <button className='btn btn-sm'>
-                                            <a href="https://github.com/mattflahertyy/Orthello" target="_blank" rel="noopener noreferrer">
-                                                Orthello
-                                            </a>
-                                        </button>
-                                        <p>Java</p>
-                                    </td>
-                                    <td className="border border-white p-4">
-                                        <p>Orthello is a 2D board game which is played through the console.</p>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        {/*image*/}
-                        {/*          <div className='groupe relative overflow-hidden border-2 border-white/50 rounded-x1'>*/}
-                        {/*            /!*overlay*!/*/}
-                        {/*          <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>*/}
-                        {/*          /!*img*!/*/}
-                        {/*          <img className='group-hover:scale-125  transition-all duration-500' src={Img3} alt=''/>*/}
-                        {/*          /!*pretitle*!/*/}
-                        {/*          <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>UI/UX Design</div>*/}
-                        {/*          /!*<span className='text-gradient'>UI/UX Designt</span>*!/*/}
-                        {/*          /!*title*!/*/}
-                        {/*          <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>*/}
-                        {/*<span className='text-3x1 text-white'>Project Title</span>*/}
-                        {/*          </div>*/}
-                        {/*          </div>*/}
-                    </motion.div>
-                    <motion.div
-                        variants={fadeIn('left', 0.2)}
-                        initial='hidden'
-                        whileInView={'show'}
-                        viewport={{once: false, amount:0.3}}
-                        className='flex-1 flex flex-col gap-y-10'>{/*image*/}</motion.div>
+                {/* Header */}
+                <motion.div
+                    variants={fadeIn('down', 0.3)}
+                    initial='hidden'
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.3 }}
+                    className='text-center'>
+                    <h1 className='h2 font-bold leading-tight text-accent mb-4'>
+                        Work Experience
+                    </h1>
+                </motion.div>
+
+                {/* Work Experience Timeline */}
+                <div className='space-y-4'>
+                    {workData.map((work, index) => (
+                        <motion.div
+                            key={work.id}
+                            variants={fadeIn(index % 2 === 0 ? 'right' : 'left', 0.3)}
+                            initial='hidden'
+                            whileInView={'show'}
+                            viewport={{ once: false, amount: 0.3 }}
+                            className="group"
+                        >
+                            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300">
+                                <div className="p-2.5">
+                                    <div className='flex flex-col lg:flex-row gap-2 items-center'>
+                                        {/* Image Container */}
+                                        <div className='flex-shrink-0 lg:w-20 w-full scale-75'>
+                                            <div className='relative group/image'>
+                                                <div className='rounded-lg overflow-hidden flex justify-center items-center'>
+                                                    <img 
+                                                        src={work.image} 
+                                                        alt={work.company}
+                                                        className='w-full h-full object-cover group-hover/image:scale-105 transition-transform duration-300 cursor-pointer'
+                                                        onClick={() => handleWorkClick(work.linkedinUrl)}
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Content */}
+                                        <div className='flex-1 text-center lg:text-left'>
+                                            <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-1.5'>
+                                                {/* Left Side - Company Info */}
+                                                <div className='flex-1'>
+                                                    <div className='flex flex-col lg:flex-row lg:items-center lg:gap-3'>
+                                                        {/* Company Info */}
+                                                        <div className='flex-1 flex flex-col lg:flex-row lg:items-center lg:gap-3'>
+                                                            <div>
+                                                                <h3 className='text-lg font-bold text-white transition-colors'>
+                                                                    {work.company}
+                                                                </h3>
+                                                                <div className='flex items-center gap-2 justify-center lg:justify-start'>
+                                                                    <h4 className='text-sm font-medium text-white/90'>
+                                                                        {work.position}
+                                                                    </h4>
+                                                                    <span className='inline-block px-2 py-0.5 rounded-full text-xs font-medium bg-white/10 text-white'>
+                                                                        {work.jobType}
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                {/* Right Side - Meta Information */}
+                                                <div className='flex flex-col lg:items-end gap-1.5'>
+                                                    {/* Meta Information */}
+                                                    <div className='flex flex-wrap justify-center lg:justify-end gap-2 text-xs text-white/70'>
+                                                        <span className='px-2 py-0.5 bg-white/10 rounded-full text-xs text-white/80 font-medium border border-white/20'>
+                                                            {calculateDuration(work.startDate, work.endDate)}
+                                                        </span>
+                                                        <div className='flex items-center gap-1'>
+                                                            <Calendar className='w-3 h-3' />
+                                                            {formatDateRange(work.startDate, work.endDate)}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Description - Hidden on mobile to save space */}
+                                            <div className='hidden lg:block text-white/70 text-sm mt-1.5 leading-relaxed whitespace-pre-line'>
+                                                {work.description}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Hover Effect */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-x-full group-hover:translate-x-[-100%] transition-transform duration-1000"></div>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
         </section>
     );
 };
 
-export default Work;
+export default WorkExperience;
