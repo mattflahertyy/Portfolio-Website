@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/Portfolio-Website/static/css/main.36923eb5.css",
-    "main.js": "/Portfolio-Website/static/js/main.0804d8cb.js",
+    "main.css": "/Portfolio-Website/static/css/main.5be119ed.css",
+    "main.js": "/Portfolio-Website/static/js/main.b759e646.js",
+    "static/media/DeansList.pdf": "/Portfolio-Website/static/media/DeansList.1c4cd8ed0c211415dfb2.pdf",
     "static/media/pfp.png": "/Portfolio-Website/static/media/pfp.519c9ad4be50538cf130.png",
     "static/media/MatthewFlahertyResume.pdf": "/Portfolio-Website/static/media/MatthewFlahertyResume.3c3086bd84b567182cce.pdf",
     "static/media/github2.png": "/Portfolio-Website/static/media/github2.232adcefa69f5637b5de.png",
@@ -13,11 +14,11 @@
     "static/media/pcasa.jpeg": "/Portfolio-Website/static/media/pcasa.d52b632bcf6194fbcf3a.jpeg",
     "static/media/concordia.webp": "/Portfolio-Website/static/media/concordia.a4ffa00025764db7562d.webp",
     "index.html": "/Portfolio-Website/index.html",
-    "main.36923eb5.css.map": "/Portfolio-Website/static/css/main.36923eb5.css.map",
-    "main.0804d8cb.js.map": "/Portfolio-Website/static/js/main.0804d8cb.js.map"
+    "main.5be119ed.css.map": "/Portfolio-Website/static/css/main.5be119ed.css.map",
+    "main.b759e646.js.map": "/Portfolio-Website/static/js/main.b759e646.js.map"
   },
   "entrypoints": [
-    "static/css/main.36923eb5.css",
-    "static/js/main.0804d8cb.js"
+    "static/css/main.5be119ed.css",
+    "static/js/main.b759e646.js"
   ]
 }
