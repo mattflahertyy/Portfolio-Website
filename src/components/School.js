@@ -11,17 +11,6 @@ const School = () => {
         {
             id: 1,
             school: "Concordia University",
-            program: "Master's of Applied Science - Information Systems Security",
-            status: "In Progress",
-            year: "2025 - Present",
-            description: "Thesis focused on advanced cybersecurity techniques with an emphasis on AI systems. Exploring the intersection of prompt injection attacks and LLM vulnerabilities, including methods to jailbreak language models through adversarial prompting. Research aims to identify, categorize, and mitigate security threats in generative AI systems. Expected to graduate in 2027.",
-            achievements: [],
-            image: ConcordiaLogo,
-            linkedinUrl: "https://www.concordia.ca/",
-        },
-        {
-            id: 2,
-            school: "Concordia University",
             program: "Bachelor's of Engineering - Software Engineering",
             status: "Completed",
             year: "2022 - 2025",
@@ -31,7 +20,7 @@ const School = () => {
             linkedinUrl: "https://www.concordia.ca/",
         },
         {
-            id: 3,
+            id: 2,
             school: "John Abbott College",
             program: "Sciences",
             status: "Completed",
@@ -42,7 +31,7 @@ const School = () => {
             linkedinUrl: "https://johnabbott.qc.ca/",
         },
         {
-            id: 4,
+            id: 3,
             school: "Loyola High School",
             program: "",
             status: "Completed",
@@ -68,13 +57,13 @@ const School = () => {
                     whileInView={'show'}
                     viewport={{ once: false, amount: 0.3 }}
                     className='text-center'>
-                    <h1 className='h2 font-bold leading-tight text-accent mb-4'>
+                    <h1 className='h2 font-bold leading-tight text-accent mb-8'>
                         Education
                     </h1>
                 </motion.div>
 
                 {/* Education Timeline */}
-                <div className='space-y-4'>
+                <div className='space-y-2'>
                     {educationData.map((education, index) => (
                         <motion.div
                             key={education.id}

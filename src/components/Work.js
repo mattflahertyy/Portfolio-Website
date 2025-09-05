@@ -102,7 +102,7 @@ const WorkExperience = () => {
                 </motion.div>
 
                 {/* Work Experience Timeline */}
-                <div className='space-y-4'>
+                <div className='space-y-2'>
                     {workData.map((work, index) => (
                         <motion.div
                             key={work.id}
