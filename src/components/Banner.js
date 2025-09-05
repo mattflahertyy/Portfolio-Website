@@ -40,9 +40,9 @@ const Banner = () => {
                 <span className='text-white mr-4'>I am a</span>
                 <TypeAnimation
                     sequence={[
-                      'Student', 2000, 'Software Engineer', 2000,
+                      'Software Engineer', 2000,
                     ]}
-                    speed={50}
+                    speed={10}
                     className='text-accent'
                     wrapper='span'
                     repeat={Infinity}
@@ -53,7 +53,7 @@ const Banner = () => {
                   initial= 'hidden'
                   whileInView={'show'}
                   viewport={{once:false, amount:0.7}}
-                  className='mb-8 max-w-lg mx-auto lg:mx-0'>Pursuing a Master's degree in Information Systems Security.</motion.p>
+                  className='mb-8 max-w-lg mx-auto lg:mx-0'>Recently graduated in Software Engineering.</motion.p>
               <motion.div
                   variants={fadeIn('up',0.6)}
                   initial= 'hidden'
