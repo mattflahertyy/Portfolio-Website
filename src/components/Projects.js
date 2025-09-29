@@ -12,6 +12,14 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
+            title: "Market ML Dashboard - Real-Time Stock Prediction",
+            tech: "Python, Typescript, React, FastAPI",
+            description: "Built a real-time trading dashboard using FastAPI/WebSockets to stream live stock data to a React/Typescript frontend with Lightweight Charts, indicators (RSI, MACD), and trend analysis visualizations for insights. Integrated yfinance to display key valuation metrics (market cap, P/E rate, volatility). Trained a machine learning model (scikit-learn) to predict price movements and compute risk metrics. Designed a flexible backend architecture providing low-latency analytics integrated to simulate real life trading environments.",
+            link: "https://github.com/mattflahertyy/market-ML-dashboard/",
+            gradient: "from-green-500 to-blue-600"
+        },
+        {
+            id: 2,
             title: "Smartess (Capstone Project)",
             tech: "React, Typescript, Go, NoSQL",
             description: "Directed a 10-member team for 8 months in orchestrating the development of a home system using React.js, JavaScript, TypeScript, Go and Firebase, split into a website team and a hub device team. Employed Agile development methodologies, conducting weekly meetings to foster collaboration, adaptability, and consistent progress towards project milestones, while orchestrating CI/CD pipelines using GitHub.",
@@ -19,7 +27,7 @@ const Projects = () => {
             gradient: "from-blue-500 to-red-600"
         },
         {
-            id: 2,
+            id: 3,
             title: "AI Facial Recognition",
             tech: "Python",
             description: "Developed a robust data preprocessing pipeline, automating tasks like duplicate removal, image resizing, and data splitting to optimize the dataset for AI model training. Trained and evaluated multiple Convolutional Neural Network (CNN) architectures, implementing cross-validation and early stopping to improve model accuracy and reduce overfitting. Conducted bias detection and mitigation based on race and gender metrics, enhancing the model's fairness through targeted data augmentation and evaluation of performance across demographics.",
@@ -27,7 +35,7 @@ const Projects = () => {
             gradient: "from-yellow-500 to-orange-600"
         },
         {
-            id: 3,
+            id: 4,
             title: "Predicting NFL Injuries - ML",
             tech: "Python, Power BI",
             description: "This machine learning project aimed to predict NFL injuries by combining Kaggle data with personally scraped NFL player and injury data. After thorough cleaning and merging, we trained a model to forecast injuries based on weather, age, and position. Utilizing Power BI, we visualized the insights through graphs, offering a comprehensive understanding of injury patterns and contributing factors.",
@@ -35,7 +43,7 @@ const Projects = () => {
             gradient: "from-green-500 to-teal-600"
         },
         {
-            id: 4,
+            id: 5,
             title: "CondoConnect",
             tech: "React, JavaScript, NoSQL",
             description: "CondoConnect is a collaborative effort of 10 developers streamlining a condo management system between condo companies and renters/owners. The system offers essential features like account creation, robust user authentication, condo dashboards, and many more features. The tech stack includes a React JS front end along with Javascript and a Firebase DB storage, showcasing proficiency in modern web development tools and technologies.",
@@ -43,7 +51,7 @@ const Projects = () => {
             gradient: "from-green-500 to-purple-600"
         },
         {
-            id: 5,
+            id: 6,
             title: "DB Socket Server",
             tech: "Python",
             description: "This Python project is a client/server database program. The server manages a customer database from a text file. Clients interact through a menu, performing operations like finding, adding, updating, and deleting records.",
@@ -51,7 +59,7 @@ const Projects = () => {
             gradient: "from-orange-500 to-red-600"
         },
         {
-            id: 6,
+            id: 7,
             title: "Orthello",
             tech: "Java",
             description: "Orthello is a 2D board game which is played through the console.",
