@@ -14,7 +14,7 @@ import { Link } from 'react-scroll';
 // import {BiUser} from "react-icons/bi";
 
 // Import resume PDF
-import ResumePDF from '../assets/MatthewFlahertyResume.pdf';
+import ResumePDF from '../assets/MatthewFlahertyCV.pdf';
 
 const Banner = () => {
   return (
