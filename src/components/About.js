@@ -39,7 +39,7 @@ const About = () => {
                 className='flex-1 bg-contain bg-no-repeat  mix-blend-lighten bg-top'>
               <div className='flex flex-col items-center lg:gap-y-3 ns'>
                 <a href='https://www.concordia.ca/'>
-                  <img src={Concordia} width={1000} height={300}></img>
+                  <img src={Concordia} width={1000} height={300} alt="Concordia University logo"></img>
                 </a>
                 <h3 className='h3 max-w-[455px] mb-16'>Cumulative GPA: <span style={{ color: 'green' }}>3.84</span> </h3>
                 <h3 className='h3 max-w-[455px] mb-16'>Languages spoken: <TypeAnimation

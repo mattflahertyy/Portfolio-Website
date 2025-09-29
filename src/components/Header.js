@@ -1,10 +1,8 @@
 import React from 'react';
 //images
-import Logo from '../assets/logo2.png'
 import Linkedin from '../assets/linkedin.png'
 import Github from '../assets/github2.png'
 import PFP from '../assets/pfp.png';
-import {Link} from "react-scroll";
 
 const Header = () => {
   return (
