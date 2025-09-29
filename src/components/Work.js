@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
-import { Calendar, MapPin } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 import CAE from '../assets/cae.jpeg';
 import Phoenix from '../assets/phoenix.jpeg';
@@ -46,10 +46,10 @@ const WorkExperience = () => {
             jobType: "Internship",
             startDate: "September 1, 2024",
             endDate: "April 25, 2025",
-            description: `  • Designed and developed front-end components and pages for internal tools using React Js and TypeScript.
-                            • Engineered backend API endpoints in C# enabling seamless front-end integration and efficient data transfer.
+            description: `  • Designed and developed front-end components and pages for internal tools using ReactJS and TypeScript.
+                            • Engineered backend API endpoints in C# allowing consistent front-end integration and data transfer.
                             • Created and optimized SQL scripts, developed and maintained database tables, views, and indexes to support robust data management and reporting.
-                            • Collaborated in an agile environment, participating in sprint planning, grooming, daily scrum meetings, and code reviews to maintain a streamlined development process.`,
+                            • Collaborated in an agile environment, participating in sprint planning, grooming, daily scrum meetings and code reviews to maintain a streamlined development process.`,
             image: CAE,
             linkedinUrl: "https://www.linkedin.com/company/cae/",
         },
@@ -61,9 +61,8 @@ const WorkExperience = () => {
             startDate: "May 1, 2023",
             endDate: "Present",
             description: `  • Developed an array of SQL queries to generate comprehensive product and inventory reports.
-                            • Crafted and implemented visual sales and inventory dashboards for clients through the proficient utilization of SQL queries within the Power BI framework.
-                            • Collaborated within a team to leveraging agile methodologies including sprint-based development, employing React JS, CSS, and BBj.
-                            • Provided technical support to clients, resolving issues related to software and hardware, ensuring optimal system performance and user satisfaction.
+                            • Crafted and implemented visual sales and inventory dashboards in Power BI using SQL queries.
+                            • Collaborated within a team to conceptualize and integrate innovative functionalities into the corporate website leveraging agile methodologies employing ReactJS, CSS, and BBj.
                             • Conducted remote video conferences with customers to provide guidance on ODBC connection setups.`,
             image: Phoenix,
             linkedinUrl: "https://www.linkedin.com/company/phoenix-business-systems-inc-/",
