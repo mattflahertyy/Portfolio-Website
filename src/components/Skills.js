@@ -5,7 +5,7 @@ import { fadeIn } from '../variants';
 const skills = [
   {
     title: 'Programming Languages',
-    items: ['Java', 'C#', 'C', 'C++', 'Python', 'Go', 'JavaScript', 'TypeScript', 'SQL'],
+    items: ['Java', 'C#', 'C', 'C++', 'Python', 'Go', 'JavaScript', 'TypeScript', 'SQL', 'NoSQL'],
   },
   {
     title: 'Web & UI Development',
@@ -17,7 +17,7 @@ const skills = [
   },
   {
     title: 'Tools & Platforms',
-    items: ['GitHub', 'Jira', 'Azure DevOps', 'Figma', 'Power BI', 'Jaspersoft', 'AutoCAD', 'Android Studio'],
+    items: ['GitHub', 'Jira', 'Azure', 'Figma', 'Power BI', 'Jaspersoft', 'AWS', 'Docker', 'SSMS', 'WebSocket'],
   },
   {
     title: 'Spoken Languages',
