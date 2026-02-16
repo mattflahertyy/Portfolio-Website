@@ -53,7 +53,7 @@ const Banner = () => {
                   initial= 'hidden'
                   whileInView={'show'}
                   viewport={{once:false, amount:0.7}}
-                  className='mb-8 max-w-lg mx-auto lg:mx-0'>Recently graduated in Software Engineering.</motion.p>
+                  className='mb-8 max-w-lg mx-auto lg:mx-0'>Software Engineer II at Morgan Stanley</motion.p>
               <motion.div
                   variants={fadeIn('up',0.6)}
                   initial= 'hidden'

@@ -5,7 +5,7 @@ import { Calendar } from 'lucide-react';
 
 import CAE from '../assets/cae.jpeg';
 import Phoenix from '../assets/phoenix.jpeg';
-import Reffing from '../assets/pcasa.jpeg';
+import MorganStanley from '../assets/morganstanley.jpg';
 
 const WorkExperience = () => {
     // Function to calculate duration between two dates
@@ -41,6 +41,17 @@ const WorkExperience = () => {
     const workData = [
         {
             id: 1,
+            company: "Morgan Stanley",
+            position: "Software Engineer II",
+            jobType: "Full-time",
+            startDate: "February 23, 2026",
+            endDate: "Present",
+            description: `General Ledger and Tax team`,
+            image: MorganStanley,
+            linkedinUrl: "https://www.linkedin.com/company/morgan-stanley/",
+        },
+        {
+            id: 2,
             company: "CAE Inc.",
             position: "Full Stack Developer Intern",
             jobType: "Internship",
@@ -66,18 +77,6 @@ const WorkExperience = () => {
                             • Conducted remote video conferences with customers to provide guidance on ODBC connection setups.`,
             image: Phoenix,
             linkedinUrl: "https://www.linkedin.com/company/phoenix-business-systems-inc-/",
-        },
-        {
-            id: 3,
-            company: "Soccer Pointe-Claire",
-            position: "Referee",
-            jobType: "Part-time",
-            startDate: "April 1, 2015",
-            endDate: "October 31, 2022",
-            description: `  • Officiated over 200 games for the Pointe-Claire Soccer Association and regional leagues. 
-                            • Ensured fair play, enforced rules, and resolved disputes through effective communication and teamwork.`,
-            image: Reffing,
-            linkedinUrl: "https://www.linkedin.com/company/soccerpointeclaire/",
         }
     ];
 

@@ -70,7 +70,7 @@ const About = () => {
                 className='flex-1'>
 
               <h2 className='h2  font-bold text-accent'>About me</h2>
-              <h3 className='h3 mb-4'>Recently graduated in Software Engineering @ Concordia University in Montreal, Canada 🇨🇦</h3>
+              <h3 className='h3 mb-4'>Software Engineer II @ Morgan Stanley. Graduated in Software Engineering @ Concordia University in Montreal, Canada 🇨🇦</h3>
               {/*<p className='mb-6'>*/}
               {/*  Currently working at Phoenix Solutions Inc. as a Junior Software Engineer*/}
               {/*</p>*/}
