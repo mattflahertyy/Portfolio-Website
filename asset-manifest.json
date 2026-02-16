@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio-Website/static/css/main.6ac32c2d.css",
-    "main.js": "/Portfolio-Website/static/js/main.10ad1e3e.js",
+    "main.js": "/Portfolio-Website/static/js/main.a984f38b.js",
     "static/media/pfp.png": "/Portfolio-Website/static/media/pfp.45e9752e25b8ea6a4148.png",
     "static/media/DeansList.pdf": "/Portfolio-Website/static/media/DeansList.1c4cd8ed0c211415dfb2.pdf",
     "static/media/MatthewFlahertyCV.pdf": "/Portfolio-Website/static/media/MatthewFlahertyCV.06b552b35a10b2d4e7a0.pdf",
@@ -10,15 +10,15 @@
     "static/media/loyola.png": "/Portfolio-Website/static/media/loyola.156e8a9cbaf6c1eca52f.png",
     "static/media/john-abbott.png": "/Portfolio-Website/static/media/john-abbott.835a372844b9048dc38e.png",
     "static/media/concordialogo.png": "/Portfolio-Website/static/media/concordialogo.f5960650a3e506c9e9a2.png",
+    "static/media/morganstanley.jpg": "/Portfolio-Website/static/media/morganstanley.8babd64e6e06a039ab21.jpg",
     "static/media/site-bg2.jpg": "/Portfolio-Website/static/media/site-bg2.090d613fca62322f966b.jpg",
-    "static/media/pcasa.jpeg": "/Portfolio-Website/static/media/pcasa.d52b632bcf6194fbcf3a.jpeg",
     "static/media/concordia.webp": "/Portfolio-Website/static/media/concordia.a4ffa00025764db7562d.webp",
     "index.html": "/Portfolio-Website/index.html",
     "main.6ac32c2d.css.map": "/Portfolio-Website/static/css/main.6ac32c2d.css.map",
-    "main.10ad1e3e.js.map": "/Portfolio-Website/static/js/main.10ad1e3e.js.map"
+    "main.a984f38b.js.map": "/Portfolio-Website/static/js/main.a984f38b.js.map"
   },
   "entrypoints": [
     "static/css/main.6ac32c2d.css",
-    "static/js/main.10ad1e3e.js"
+    "static/js/main.a984f38b.js"
   ]
 }
